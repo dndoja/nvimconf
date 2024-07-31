@@ -34,7 +34,7 @@ return {
             { text = '', texthl = 'DapStopped', linehl = 'DapStopped', numhl = 'DapStopped' })
 
         vim.keymap.set("n", "<leader>DU", "<cmd>lua require('dapui').toggle()<CR>")
-        vim.keymap.set("n", "<leader> @overrideL", "<cmd>lua require('dap').repl.toggle({width=90}, 'bo vs')<CR>")
+        vim.keymap.set("n", "<leader>L", "<cmd>lua require('dap').repl.toggle({width=90}, 'bo vs')<CR>")
         vim.keymap.set("n", "<leader>b", "<cmd>lua require('dap').toggle_breakpoint()<CR>")
         vim.keymap.set("n", "<F5>", "<cmd>lua require('dap').continue()<CR>")
         vim.keymap.set("n", "<F8>", "<cmd>lua require('dap').step_over()<CR>")
