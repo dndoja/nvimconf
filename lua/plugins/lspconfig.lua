@@ -83,6 +83,7 @@ return {
       require'lspconfig'.gopls.setup{}
       require'lspconfig'.ruff_lsp.setup{}
       require'lspconfig'.metals.setup{}
+      require'lspconfig'.zls.setup{}
       -- require'lspconfig'.dartls.setup{}
     end
   }
