@@ -6,7 +6,7 @@ return {
     keys = {
         {
             "<leader>E",
-            "<cmd> lua require('trouble').toggle()<cr>",
+            "<cmd>Trouble diagnostics toggle <cr>",
             desc = "Diagnostics (Trouble)",
         },
     },

@@ -11,16 +11,12 @@ return {
         require('flutter-tools').setup {
             debugger = {
                 enabled = false,
-                exception_breakpoints = {},
-                register_configurations = function(_)
-                    require("dap").configurations.dart = {}
-                    require("dap.ext.vscode").load_launchjs()
-                end,
-                run_via_dap = true,
+                run_via_dap = false,
             },
             dev_log = {
-                enabled = false,
-                open_cmd = "tabedit",
+                enabled = true,
+                notify_errors = false,
+                open_cmd = "bo 90vs",
             },
             lsp = {
                 analysisExcludedFolders = {
@@ -36,5 +32,22 @@ return {
             },
         }
         vim.keymap.set("n", "<leader>F", "<cmd> Telescope flutter commands<CR>")
+        vim.keymap.set("n", "<leader>L", function()
+            local winId = vim.fn.bufwinid("__FLUTTER_DEV_LOG__")
+            if winId == -1 then
+                return
+            end
+
+            local width = vim.fn.winwidth(winId)
+            local newWidth
+            if width > 0 then
+                newWidth = 0
+            else
+                newWidth = 90
+            end
+
+            vim.cmd(string.format("vertical %dres %d", winId, newWidth))
+        end
+        );
     end
 }
