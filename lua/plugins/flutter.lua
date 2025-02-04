@@ -12,6 +12,9 @@ return {
             debugger = {
                 enabled = false,
                 run_via_dap = false,
+                register_configurations = function()
+                    require("dap.ext.vscode").load_launchjs()
+                end
             },
             dev_log = {
                 enabled = true,
@@ -19,13 +22,6 @@ return {
                 open_cmd = "bo 90vs",
             },
             lsp = {
-                analysisExcludedFolders = {
-                    ".dart_tool/**",
-                    ".dart_server/**",
-                    ".pub/**",
-                    "~/dev/lib/flutter/**",
-                    "~/.pub-cache/**",
-                },
             },
             statusline = {
                 device = true,

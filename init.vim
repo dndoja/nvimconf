@@ -50,7 +50,6 @@ nnoremap tq <cmd>tabc<cr>
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set relativenumber
 
 set expandtab
 set clipboard+=unnamedplus

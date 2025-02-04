@@ -63,3 +63,4 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
 })
 vim.keymap.set("n", "<leader><tab>", function() require("trouble").toggle() end)
 vim.keymap.set("n", "<shift><F6>", function() vim.buf.lsp.rename() end)
+vim.o.exrc = true
