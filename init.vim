@@ -47,8 +47,8 @@ nnoremap <A-CR> :lua vim.lsp.buf.code_action()<CR>
 nnoremap <D-S-f> <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap tq <cmd>tabc<cr>
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 set expandtab

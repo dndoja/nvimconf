@@ -82,9 +82,10 @@ return {
             require 'lspconfig'.clangd.setup {}
             require 'lspconfig'.lua_ls.setup {}
             require 'lspconfig'.gopls.setup {}
-            require 'lspconfig'.ruff_lsp.setup {}
             require 'lspconfig'.metals.setup {}
             require 'lspconfig'.zls.setup {}
+            require 'lspconfig'.denols.setup {}
+            require 'lspconfig'.ts_ls.setup {}
             -- require'lspconfig'.dartls.setup{}
         end
     }
